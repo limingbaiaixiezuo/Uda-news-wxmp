@@ -1,0 +1,64 @@
+<!-- 顶部蓝色背景区域样式 -->
+<view class="blueArea">
+    <view class="navigation">
+        <image class="navigationImage" src="/images/mingbai.png"></image>
+        <view class="navigationTitle" >明白·资讯</view>
+    </view>   
+    <scroll-view scroll-x>
+        <view class='newsKinds' >
+            <view class="newsKinds-item{{newsTypeTitle === item ? '-wasTouched' : ''}}" 
+                  wx:for="{{newsKindsTitle}}" 
+                  wx:key="{{item}}" 
+                  bindtap="onTapCategory" 
+                  data-cat="{{item}}">
+               <view class="newsKind-item{{newsTypeTitle === item ? '-Touched' : ''}}">{{newsKindsMap[item]}}
+               </view>
+                <view class="newsKinds-itemLine-wasTouched-Line" 
+                      wx:if="{{newsTypeTitle === item}}">
+                </view>
+            </view>
+        </view>
+    </scroll-view> 
+</view>
+<!-- 头条热门区域样式 -->
+<view class="headlinesArea">
+    <view class="headlines">
+        <image class="headlinesImage" 
+               wx:if="{{headlinesImage.length !== 0}}"
+               src="{{headlinesImage}}"
+               mode = "scaleToFill"></image>
+        <image class="headlinesImage" 
+               wx:if="{{headlinesImage.length === 0}}"
+               src="/images/default.png" 
+               mode = "scaleToFill"></image>
+        <view class="headlinesHotArea">
+            <view class="headlinesHot">热门</view> 
+        </view>
+        <view class="headlinesTitleBg">    
+            <view class="headlinesTitle" 
+                id="{{headlinesId}}"
+                bindtap="onTapNewsDetials">{{headlinesTitle}}
+            </view>
+        </view>
+        <view class="timeAndsource">
+              <view class="headlinesSource" wx:if="{{headlinesSource.length !== 0}}">{{headlinesSource}}</view>
+              <view class="headlinesSource" wx:if="{{headlinesSource.length === 0}}">未知信源</view>
+              <view class="headlinesTime">{{headlinesTime}}</view>
+        </view>
+    </view>
+</view>
+<scroll-view scroll-y>
+<view class='newslistArea'>
+    <view class='newslist' wx:key="{{item}}" wx:for="{{newslistArray}}">
+         <view class= 'newslistTitle' id="{{item.newslistId}}"
+bindtap="onTapNewsDetials">{{item.newslistTitle}}</view>
+         　<view class='newsSourceAndTime'>
+             <view class= 'newslistSource' wx:if="{{item.newslistSource.length !== 0}}">{{item.newslistSource}}</view>
+             <view class= 'newslistSource' wx:if="{{item.newslistSource.length === 0}}">未知信源</view>
+             <view class= 'newslistTime'>{{item.newslistTime}}</view>
+         　</view>
+         　　<image class="newslistImage" src="{{item.newslistImage}}"></image>
+            <image class="newslistImage" wx:if="{{item.newslistImage.length === 0}}" src="/images/default.png"></image>
+      　　 </view>  
+</view>
+</scroll-view> 

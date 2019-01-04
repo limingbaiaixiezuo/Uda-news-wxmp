@@ -1,0 +1,30 @@
+<!-- 导航栏区域样式 -->
+<view class="navigation">
+    <image class="navigationImage" 
+           src="/images/back2.png" 
+           bindtap="onTapNewsList">
+    </image>
+    <view class="navigationTitle">明白·资讯</view>
+</view>  
+<view class="forLine"></view>
+<!-- 实体内容区域样式 -->
+<view class="overflowArea">
+  <view class="newsDetailTitle">{{newsDetailTitle}}</view>
+  <view class="newsDetailSourceAndTimeAndNumOfReaded">
+    <view class="newsDetailSource" wx:if="{{newsDetailSource.length !== 0}}">{{newsDetailSource}}</view>
+    <view class="newsDetailSource" wx:if="{{newsDetailSource.length === 0}}">未知信源</view>
+    <view class="newsDetailTime">{{newsDetailTime}}</view>
+    <view class="newsDetailNumOfReaded">阅读  {{readCount}}</view>
+  </view>
+  <view class="newsDetailContentArea">
+     <view class="newsDetailContent" 
+          wx:key="{{item}}" 
+          wx:for="{{newsDetailContent}}">
+        <view class="newsDetailContent-p"
+              wx:if="{{item.type === 'p'}}">{{item.text}}</view> 
+        <image class="newsDetailContent-src" 
+               wx:if="{{item.type === 'image'}}"  
+               src="{{item.src}}"></image>   
+     </view>
+  </view>
+</view>

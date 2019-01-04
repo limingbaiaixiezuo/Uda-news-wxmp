@@ -1,0 +1,189 @@
+.blueArea{
+    display:block;
+    background-color:#0aaae9cc;
+    /* z-index: -1; */
+}
+/* 导航栏区域样式设计 */
+.navigation{
+    display: inline-flex;
+    margin-top:60rpx;
+    margin-left:20rpx;
+}
+.navigationTitle {
+    margin-left:20rpx;
+    font-size: 40rpx;
+    line-height: 56rpx;
+}
+.navigationImage{
+    width: 50rpx;
+    height: 50rpx;
+}
+/* 新闻种类标题样式 */
+.newsKinds {
+    display:flex;
+    margin-left: 30rpx;
+    color:#ffffff;
+    z-index:1;
+}
+.newsKinds-item{
+    font-size: 40rpx;
+    display:flex;
+    width: 100rpx;
+    height: 40rpx;
+    flex-shrink: 0;
+    flex-direction:column;
+    align-items:left;
+    margin-top: 10rpx;
+    margin-bottom: 30rpx;  
+    opacity:0.85;
+}
+.newsKinds-item-wasTouched{
+    width: 100rpx;
+    font-size: 45rpx;
+    margin-top: 10rpx;
+}
+.newsKinds-itemLine-wasTouched-Line{
+    font-size: 45rpx;
+    width: 40rpx;
+    height: 6rpx;
+    margin-top: 4rpx;
+    margin-bottom:10rpx;
+    left:16rpx;
+    position:relative;
+    background:#ffffff;
+}
+/* 头条新闻显示区域样式 */
+.headlinesArea{
+    display:block;
+    width:750rpx;
+    height:365rpx;
+    margin:0rpx;
+    border:0rpx;
+    background-color:#d8d7d0a2!important;
+    color:#ffffff;
+    z-index: -2;
+}
+.headlines{
+    width:730rpx;
+    height:350rpx;
+    left:10rpx;
+    top:10rpx;
+    position:relative;
+}
+.headlinesImage{
+    width:100%;
+    height:100%;
+    z-index: -2;
+}
+.headlinesHotArea{
+    position:absolute;
+    width:100rpx;
+    height:50rpx;
+    top:0rpx;
+    right:0rpx;
+    border: 2px solid rgba(218, 68, 68);
+    border-bottom-left-radius:30rpx;
+    background: rgb(218, 68, 68);
+}
+.headlinesHot{
+    position:absolute;
+    font-size: 30rpx;
+    top:5rpx;
+    right:20rpx;
+}
+.headlinesTitleBg{
+    background:rgb(7, 4, 0);
+    left:25rpx;
+    top:190rpx;
+    width:670rpx;
+    position:absolute;
+    text-align:left;
+    opacity:0.85;
+    z-index: 1;
+}
+.headlinesTitle{
+    left:25rpx;
+    top:100rpx;
+    font-size:40rpx;
+    color:rgb(255, 254, 254);
+    z-index: 2;
+}
+.timeAndsource{
+    height:50rpx;
+    bottom: 0rpx;
+    left:25rpx;
+    font-size:30rpx;
+    background-color:hsla(0, 100%, 0%, 0.75)!important;
+    display: flex;
+    position: absolute;
+}
+.headlinesSource{
+    left:25rpx;
+    color: rgba(250, 250, 250, 0.9);
+    text-align:left;
+    z-index: 1;
+}
+.headlinesTime{
+    float:rigt;
+    margin-left:20rpx;
+    color: rgba(250, 250, 250, 0.85);
+    text-align:right;
+    z-index: 1;
+}
+/* 新闻列表样式 */
+.newslistArea{
+    display:block;
+    width:750rpx;
+    height:773rpx;
+    margin:0rpx;
+    border:0rpx;
+}
+.newslist{
+    left:15rpx;
+    position:relative;
+    display:block;
+    width:720rpx;
+    height:190rpx;
+    margin:0rpx;
+    border:0rpx;
+    border-bottom: 1px solid rgba(238, 232, 232, 0.9);
+}
+.newslistTitle{
+    left:15rpx;
+    top:20rpx;
+    position:absolute;
+    width:450rpx;
+    font-size:30rpx;
+    color:rgb(12, 2, 2);
+    text-align:left;
+}
+.newsSourceAndTime{
+    width:450rpx;
+    height:40rpx;
+    bottom:10rpx;
+    left:20rpx;
+    display: flex;
+    position: absolute;
+    font-size:25rpx;
+}
+.newslistSource{
+    left:0rpx;
+    bottom:0rpx;
+    float:left;
+    color: rgba(27, 15, 15, 0.85);
+    text-align:left;
+}
+.newslistTime{
+    float:right;
+    margin-left:10rpx;
+    color: rgba(46, 20, 20, 0.85);
+    text-align:right;
+}
+.newslistImage{
+    top:5rpx;
+    right:0rpx;
+    width:240rpx;
+    height:180rpx;
+    position:absolute;
+    color: rgba(250, 244, 244, 0.75);
+}
