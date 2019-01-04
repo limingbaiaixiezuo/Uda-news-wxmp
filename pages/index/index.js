@@ -31,6 +31,7 @@ Page({
     )
   },
   onLoad(options) {
+    // 如果options对象不为空，则设置新闻类型
     if (options.newsTypeTitle){
     this.setData({
          newsTypeTitle: options.newsTypeTitle,
